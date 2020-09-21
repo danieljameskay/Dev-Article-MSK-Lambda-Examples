@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Creates an SQS queue for the Poloniex Exchange Volume Lambda to send records to."
+Parameters:
+  QueueName:
+    Description: Name of the Queue
+    Type: String
+Resources: 
+  SQSQueue: 
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: !Ref QueueName
